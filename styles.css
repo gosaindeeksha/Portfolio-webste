@@ -1,0 +1,534 @@
+/* Global Styles */
+:root {
+    --primary:white;
+    --secondary: black;
+    --primary_num : 255;
+    --secondary_num : 0;
+  }
+* {
+    box-sizing: border-box;
+    cursor:none;
+}
+
+body {
+    color:var(--secondary) ;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar Styles */
+/* Brand Title */
+.brand-title {
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+/* Navbar Container */
+nav {
+    z-index: 100;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color:transparent;
+    backdrop-filter: blur(20px); /* Adjust the alpha value for opacity */
+  
+}
+
+/* Navbar Links */
+.nav-links ul {
+    margin: 0;
+    padding: 0;
+    color:var(--secondary) !important;
+    font-size: 1.5rem;
+    display: flex;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    text-align: center;
+    padding: 1rem;
+    transition: ease-out 0.5s;
+    display: block;
+    color: var(--secondary);
+}
+
+.nav-links li a:hover {
+    background-color:var(--secondary);
+    color:var(--primary);
+    border-radius: 5%;
+}
+
+/* Toggle Button Styles */
+.toggle-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 62px;
+    height: 53px;
+    padding-top: 12px;
+    padding-right: 16px;
+    padding-left: 16px;
+    padding-bottom: 10px;
+}
+
+.toggle-button .bar {
+    background-color: var(--secondary);
+    transition: ease-out 0.5s;
+    height: 5px;
+    width: 100%;
+    border-radius: 20%;
+}
+
+.toggle-button:hover {
+    background-color:var(--secondary);
+    border-radius: 5%;
+}
+
+.toggle-button:hover span {
+    background-color:var(--primary);
+    border-radius: 20%;
+}
+
+/* Responsive Styles */
+@media (max-width: 800px) {
+    .toggle-button {
+        display: flex;
+        z-index: 2;
+    }
+
+    .nav-links ul {
+        display: none;
+    }
+
+    .icon#bar1 {
+        transform: translateY(14px) rotate(-45deg);
+    }
+
+    .icon#bar2 {
+        opacity: 0;
+    }
+
+    .icon#bar3 {
+        transform: translateY(-12px) rotate(45deg);
+    }
+
+    /* Mobile Navigation Container */
+    .change {
+        position: absolute;
+        top: 0px;
+        padding-top: 80px !important;
+        right: 0%;
+        display: flex !important;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-content: center;
+        width: 30%;
+        height: 100%;
+        z-index: 1;
+        background-color: rgba(var(--secondary_num),var(--secondary_num), var(--secondary_num), 0.1);
+    }
+}
+
+/* Hero Division Styles */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100dvh;
+    background-color:rgba(var(--primary_num), var(--primary_num), var(--primary_num), 0.5);
+    margin: 0;
+   
+  
+}
+/*background image for 1st section*/
+.iitmandi1{
+    position: fixed;
+    z-index: -1;
+    opacity: 0.5;
+    height: 100dvh;
+    width: 100%;
+}
+
+.hero h1 {
+    font-size: 9vw;
+    position: absolute;
+    top: 15%;
+    left: 3%;
+
+    color:var(--secondary);
+}
+/*About me section*/
+#about{
+    height: 100dvh;
+    background-color:var(--primary);
+    margin: 0;
+    padding-top: 9dvh;
+}
+#about h1{
+    text-align: center;
+   
+}
+.about-container{
+    display: grid;
+   
+    height:80dvh;
+    grid-template-rows: repeat(10,1fr);
+    grid-template-columns: repeat(12,1fr);
+
+}
+#me-img{
+  
+    grid-column: 2/5;   
+    grid-row: 3/9;
+    justify-self: stretch;
+    align-self: stretch;
+    border-radius:0;
+}
+.content{
+    grid-column: 6/12;   
+    grid-row: 3/9;
+    justify-self: stretch;
+    align-self: stretch;
+
+
+}
+/*skils*/
+#skills{
+    height: 100dvh;
+    background-color:rgba(var(--primary_num), var(--primary_num), var(--primary_num), 0.5);
+    margin: 0;
+    padding-top: 9dvh;
+}
+#skills h1{
+    text-align: center;
+}
+.skills-container{
+    display: grid;
+   
+    height:80dvh;
+    grid-template-rows: repeat(10,1fr);
+    grid-template-columns: repeat(12,1fr);
+}
+.bar{
+    display: block;
+    background: var(--primary);
+    height: 20px;
+    border:1px solid rgba(var(--secondary_num),var(--secondary_num), var(--secondary_num), 0.3);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.25,0.8,0.25,1);
+    box-shadow: 5px 5px 5px lightgrey;
+}
+ul{
+    list-style: none;
+}
+#HTML{
+    grid-row: 3/4;
+    grid-column:2/6;
+    justify-self: stretch;
+    align-self: stretch;
+}
+#CSS{
+    grid-row: 5/6;
+    grid-column:2/6;
+    justify-self: stretch;
+    align-self: stretch;
+}
+#JS{
+    grid-row: 7/8;
+    grid-column:2/6;
+    justify-self: stretch;
+    align-self: stretch;
+}
+#Python{
+    grid-row: 3/4;
+    grid-column:8/12;
+    justify-self: stretch;
+    align-self: stretch;
+}
+#C{
+    grid-row: 5/6;
+    grid-column:8/12;
+    justify-self: stretch;
+    align-self: stretch;
+
+}
+#git{
+    grid-row: 7/8;
+    grid-column:8/12;
+    justify-self: stretch;
+    align-self: stretch;
+
+}
+.bar span{
+    border: 2px solid var(--primary);
+    border-radius: 10px;
+    float: left;
+    background:var(--secondary);
+    height: 20px;
+
+}
+
+
+/* Keyframes Animations*/
+/*keyframe animation for the skills section*/
+@keyframes html {
+    0%{
+        width: 0;
+    }
+    100%{
+        width:90% ;
+    }
+    
+}
+@keyframes CSS {
+    0%{
+        width: 0;
+    }
+    100%{
+        width:80% ;
+    }
+    
+}
+@keyframes JS {
+    0%{
+        width: 0;
+    }
+    100%{
+        width:40% ;
+    }
+    
+}
+@keyframes Python{
+    0%{
+        width: 0;
+    }
+    100%{
+        width:75% ;
+    }
+    
+}
+@keyframes  c{
+    0%{
+        width: 0;
+    }
+    100%{
+        width:30% ;
+    }
+    
+}
+@keyframes git {
+    0%{
+        width: 0;
+    }
+    100%{
+        width:20% ;
+    }
+    
+}
+
+
+
+/*keyframe animation for hamburger drop down menu*/
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        right: 90%;
+    }
+
+    100% {
+        opacity: 1;
+        right: 3%;
+    }
+}
+/* Set the initial width for the empty bar */
+.HTML, .CSS, .JS, .Python, .C, .git {
+    width: 0;
+}
+.animated .HTML {
+    animation: html 2s forwards;
+}
+.animated .CSS{
+    animation: CSS 2s forwards;
+
+}
+.animated .JS{
+    animation: JS 2s forwards;
+}
+.animated .Python{
+    animation: Python 2s forwards;
+}
+.animated .C {
+    animation: c 2s forwards;
+}
+.animated .git{
+    animation: git 2s forwards;
+
+}
+
+/*CONTACT ME */
+#contactme{
+    height: 100dvh;
+    background-color: var(--primary);
+    margin: 0;
+    padding-top: 9dvh;
+}
+#contactme h1{
+    text-align: center;
+   
+}
+.contact-container{
+    display: grid;
+   
+    height:80dvh;
+    grid-template-rows: repeat(10,1fr);
+    grid-template-columns: repeat(12,1fr);
+
+}
+.footer-button{
+    height:15dvh;
+    width:15dvh;
+    border-radius: 50%;
+    color: var(--secondary);
+    background-color: var(--primary);
+  }
+  
+  .footer-button:hover{
+    background-color:var(--secondary);
+    color:var(--primary);
+  }
+  #gitpro{
+    grid-column: 2/4;
+    grid-row:3;
+    justify-self: center;
+  }
+  #g{
+    grid-column: 2/4;
+    grid-row: 4;
+
+  }
+  #ig{
+    grid-column: 6/8;
+    grid-row:3;
+    justify-self: center;
+  }
+ #l{
+    grid-column: 6/8;
+    grid-row: 4;
+
+  }
+  #emai{
+    grid-column: 10/12;
+    grid-row:3;
+    justify-self: center;
+  }
+  #e{
+    grid-column: 10/12;
+    grid-row: 4;
+
+  }
+  .contact-container> h4{
+    grid-column: 2/12;
+   text-align: center;
+  }
+  .theme{
+    position: fixed;
+    top:25%;
+    right: 1%;
+   
+
+    background-color: rgba(var(--primary_num), var(--primary_num), var(--primary_num), 0.3);
+    border: none;
+    border-radius: 50%;
+   
+  }
+#moon{
+    color: var(--secondary);
+    background-color: var(--primary);
+
+}
+
+.hide{
+    display: none;
+    opacity: 0;
+    animation-name: fadeOut;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+.show{
+    opacity: 1;
+    animation-name: fadein;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+  
+}
+#moon{
+    height: 5%;
+}
+#moon:hover{
+    background-color:var(--secondary);
+    color:var(--primary);
+  }
+#sun{
+    height: 5%;
+
+}
+#sun:hover{
+    background-color:var(--secondary);
+    color:var(--primary);
+
+
+}
+@keyframes fadein {
+    0%{
+        opacity: 0;}
+    100%{
+       opacity: 1;
+    }
+    
+}
+@keyframes fadeOut {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+    
+}
+.cursor{
+    height: 2rem;
+    width:2rem;
+    border-radius: 50%;
+    border: 2px solid var(--secondary);
+    position: absolute ;
+    top:10px;
+    left: 10px;
+    z-index: 999;
+    pointer-events: none;
+    transform: translate(-50%,-50%);
+
+    
+}
+.pointer{
+    height: 0.05rem;
+    width:0.05rem;
+    top:10px;
+    left: 10px;
+    border-radius: 50%;
+    border: 2px solid var(--secondary);
+    position: absolute;
+    z-index: 999;
+    pointer-events: none;
+    transition: all 0.06s ease;
+
+}

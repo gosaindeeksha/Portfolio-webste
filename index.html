@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/6dae39af6c.js" crossorigin="anonymous"></script>
+   
+    <script defer src="index.js"></script>
+   
+    <title>personal website</title>
+</head>
+<body>
+    <button class="theme show" id="sun"><i class="fa-solid fa-circle fa-2x"></i></button>
+    <button class="theme hide" id="moon"><i  class="fa-solid fa-moon fa-flip-horizontal fa-2x "></i></button>
+<nav>
+    <div class="brand-title">Deeksha Gosain</div>
+    <a href="#" class="toggle-button">
+        <span class="bar" id="bar1"></span>
+        <span class="bar" id="bar2"></span>
+        <span class="bar" id="bar3"></span>
+    </a>
+
+    <div class="nav-links">
+        <ul class="">
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#about"> ABOUT</a></li>
+            <li><a href="#skills">SKILLS</a></li>
+            <li><a href="#contactme">CONTACT ME</a></li>
+        </ul>
+    </div>
+</nav>
+
+
+<div class="hero" id="home">
+    
+    <h1>Hi, I'm <br><span id="typed"></span></h1>  
+    <img src="images/iitmandi1.jpeg" alt="" class="iitmandi1">
+    
+</div>
+<div id="about">
+    <h1>ABOUT ME</h1>
+
+    <div class="about-container">
+        <img src="https://picsum.photos/id/237/200" alt="me img" id="me-img">
+        <p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti accusamus quidem culpa sunt impedit tenetur nisi! Consequatur ullam aut harum sed alias, esse mollitia fuga iure, doloremque, debitis error temporibus?Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero aperiam fuga asperiores quam inventore pariatur iusto praesentium, dignissimos modi omnis porro nihil consectetur nulla voluptates! Saepe quibusdam distinctio tenetur delectus.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, asperiores tempora, cum excepturi at minima neque accusantium reprehenderit sequi tenetur adipisci voluptas, illum quibusdam totam vitae? Laborum quae alias ipsum.
+        </p>
+    </div>
+    
+</div>
+
+
+<div id="skills">
+    <h1>MY SKILLS</h1>
+    <div class="skills-container">
+        <h3 id="HTML">HTML<span class="bar"><span class="HTML"></span></span></h3>
+        <h3 id="CSS">CSS<span class="bar"><span class="CSS"></span></span></h3>
+        <h3 id="JS">JavaScript <span class="bar"><span class="JS"></span></span></h3>
+        <h3 id="Python">Python <span class="bar"><span class="Python"></span></span></h3>
+        <h3 id="C">C/C++ <span class="bar"><span class="C"></span></span></h3>
+        <h3 id="git">Version Control:GIT <span class="bar"><span class="git"></span></span></h3>
+    </div>
+</div>
+<div id="contactme">
+    <h1>GET IN TOUCH</h1>
+    <div class="contact-container">
+       
+
+        <button class="footer-button" id="gitpro"> <i class="fa-brands fa-github fa-6x" ></i></button>
+        <h4 id="g">GitHub</h4>
+        <h4 id="l">Linkedin</h4>
+        <h4 id="e">Email</h4>
+        <button class="footer-button" id="ig"> <i class="fa-brands fa-linkedin fa-5x"></i></button>
+        <button class="footer-button" id="emai"> <i class="social-icon fas fa-envelope fa-5x"></i></button>
+ 
+
+
+    </div>
+
+</div>
+<div class="cursor"></div></div>
+<div class="pointer"></div>
+<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+<script>
+    var typed=new Typed('#typed',{
+        strings: ['Deeksha Gosain'],
+        typeSpeed:100,
+        backSpeed:110,
+        loop:false
+        
+    })
+</script>
+</body>
+</html>
